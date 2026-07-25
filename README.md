@@ -1,6 +1,6 @@
-# Adaptive-Gated FT-Transformer with a Linear Branch for Multi-Output Aerodynamic Coefficient Prediction
+# 融合线性分支的自适应门控FT-Transformer多输出气动系数预测方法
 
-本仓库为论文《Adaptive-Gated FT-Transformer with a Linear Branch for Multi-Output Aerodynamic Coefficient Prediction》（投稿至《四川大学学报（自然科学版）》）的开源代码与数据仓库，包含模型实现、对比基线、消融实验及所用数据集。
+本仓库为论文《融合线性分支的自适应门控FT-Transformer多输出气动系数预测方法》（Adaptive-Gated FT-Transformer with a Linear Branch for Multi-Output Aerodynamic Coefficient Prediction）（投稿至《四川大学学报（自然科学版）》）的开源代码与数据仓库，包含模型实现、对比基线、消融实验及所用数据集。
 
 ## 目录结构
 
