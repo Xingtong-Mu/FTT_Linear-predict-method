@@ -22,12 +22,49 @@
 ## 项目简介
 
 气动系数（如升力系数、阻力系数、力矩系数等）的多输出预测是气动设计与优化中的核心问题之一。本工作提出了一种 **自适应门控 FT-Transformer 与线性分支相结合** 的混合模型：
+
 - **FT-Transformer 分支**：利用特征分词（Feature Tokenizer）与自注意力机制，捕捉特征间的高阶非线性交互关系；
 - **线性分支**：保留输入特征与输出之间的低阶线性映射关系，提升模型在训练数据有限或特征线性相关性较强场景下的稳健性；
 - **自适应门控机制**：根据输入样本自适应地融合两个分支的输出。
+
+## 环境依赖与安装
+
+本仓库所需的第三方库已列于 `requirements.txt`，请在运行代码前先完成安装：
+
+```bash
+pip install -r requirements.txt
+```
+
+## 运行说明
+
+**请在运行程序时，将各 `.py` 脚本与所使用的数据集 `.csv` 文件放置于同一文件夹下**，否则程序可能因找不到数据文件而报错。例如：
+
+```
+.
+├── main.py
+├── data_2822.csv
+├── data_CHN_F1.csv
+└── data_nasa.csv
+```
+
+## 数据集说明与引用
+
+本仓库提供的三个数据集（`data_2822.csv`、`data_CHN_F1.csv`、`data_nasa.csv`）均为**处理后的数据**，仅保留了用于构建代理模型（Surrogate Model）所需的输入特征与输出气动系数字段，原始数据来源及引用信息如下：
+
+1. 中国空气动力研究与发展中心计算空气动力研究所. CFD验证与确认数据库[DS/OL]. (2023-01). https://doi.org/10.12176/99.70.00007-V01.
+
+   （Computational Aerodynamics Research Institute, China Aerodynamics Research and Development Center. CFD validation and confirmation database[DS/OL]. (2023-01). https://doi.org/10.12176/99.70.00007-V01.）
+
+2. WHITE P. Dataset for Airbus, Pressure Measurements on the Transonic Aerofoil RAE2822: Version 3[DS/OL]. Loughborough University, 2026[2026-07-21]. DOI: 10.17028/rd.lboro.29383292.
+
+3. NATIONAL AERONAUTICS AND SPACE ADMINISTRATION. NASA Common Research Model: NTF Test 197 Run Data[DS/OL]. [2026-07-21]. https://commonresearchmodel.larc.nasa.gov/experimental-data/ntf-experimental-results/test-197-run-data/
+
+如使用本仓库提供的数据集开展后续研究，请一并引用上述原始数据来源。
 
 
 ## 许可协议
 
 本仓库遵循 MIT License 开源协议，详见 `LICENSE` 文件。
+
+
 
